@@ -8,7 +8,8 @@ import PostList from './components/PostList/PostList';
 import Post from './components/Post/Post';
 import CreatePost from './components/Post/CreatePost';
 import EditPost from './components/Post/EditPost';
-
+import hero from './Hero.jpg';
+import bodyimg from './bodyimg.jpg';
 class App extends React.Component {
   state = {
     posts: [],
@@ -152,7 +153,9 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <h1>GoodThings</h1>
+            <h1>The World of Tomorrow</h1>
+            <p>The Official Futurama Fan Boards</p>
+            <img className="hero" src={hero} alt="Hero" />        
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -189,7 +192,10 @@ class App extends React.Component {
                     />
                   </React.Fragment>
                 ) : (
-                  <React.Fragment>Please Register or Login</React.Fragment>
+                  <React.Fragment>
+                    <h2>Register or login to participate in the ultimate Futurama fan board</h2>
+                    <img className="bodyimg" src={bodyimg} alt="Fry" />      
+                  </React.Fragment>
                 )}
               </Route>
               <Route path="/posts/:postId">
